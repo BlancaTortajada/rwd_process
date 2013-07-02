@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Responsive Web Design</title>
+
+<meta name="description" content="Portfolio">
+<meta name="author" content="Blanca Tortajada">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+<link rel="apple-touch-icon" sizes="72x72" href="images/touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="images/touch-icon-ipad-retina.png" />
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+<style type="text/css">
+.reveal section img {
+  border: none;
+  box-shadow: none;
+}
+
+.reveal.overview .slides section:not(.stack) {
+  background-color: white;
+  opacity: 0.5 !important;
+}
+
+.reveal.overview .slides section:not(.stack):hover {
+  opacity: 0.75 !important;
+  box-shadow: 0 0 2em gray;
+}
+
+.reveal.overview .slides section.present:not(.stack) {
+  background-color: white;
+  opacity: 1 !important;
+  box-shadow: 0 0 2em red;
+}
+
+/* Progress line in the bottom of the screen */
+.reveal .progress span {
+  background-color: gray;
+}
+
+/* Color direction arrows */
+.reveal .controls div.navigate-left  ,.reveal .controls div.navigate-left.enabled  { border-right-color: #d1d1d1; }
+.reveal .controls div.navigate-right ,.reveal .controls div.navigate-right.enabled { border-left-color:  #d1d1d1; }
+.reveal .controls div.navigate-up    ,.reveal .controls div.navigate-up.enabled    { border-bottom-color:#d1d1d1; }
+.reveal .controls div.navigate-down  ,.reveal .controls div.navigate-down.enabled  { border-top-color:   #d1d1d1; }
+
+.reveal section.stack {
+  height: 100%;
+}
+
+.reveal section.screenshot:not(.loading) {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.reveal section.screenshot:not(.loading) img {
+  max-height: none;
+  height: auto;
+  width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="reveal">
+
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section>
+      <h1 id="title">Responsive Web Design</h1>
+      <h1 id="subtitle">Applying the process</h1>
+    </section>
+    <section>
+      <h1>The web today</h1>
+      <h3>There are now more devices than we can design for.</h3>
+      <h3>In 2012, 51% of adults in the UK used a mobile phone to access the Internet.</h3>
+      <h3>Apple or Android devices are the most popular, but not the most common.</h3>
+    </section>
+    <section>
+      <h1>From the bottom up</h1>
+      <h3>Design the content — content defines the layout.</h3>
+      <h3>Can the message be conveyed just with unstyled HTML?</h3>
+      <h3>Enhance content and style for larger screens and more advanced devices.</h3>
+    </section>
+    <section>
+      <section>
+        <h1>The process</h1>
+        <h3>1. Content inventory &amp; reference</h3>
+        <h3>2. Design the content</h3>
+        <h3>3. Breakpoints for different sizes</h3>
+        <h3>4. HTML prototype</h3>
+        <h3>5. Review & iterations</h3>
+        <h3>6. Documented style guide</h3>
+      </section>
+      <section>
+        <h2>1. Content inventory &amp; reference</h2>
+        <h3>Establish content hierarchy.</h3>
+        <h3>Diagrams & rough sketches.</h3>
+      </section>
+      <section>
+        <img src="imgs/content_inventory.png"/>
+      </section>
+      <section>
+        <h2>2. Design the content</h2>
+        <h3>Keep it concise - think of the smallest device context.</h3>
+      </section>
+      <section>
+        <h2>3. Breakpoints for different sizes</h2>
+        <h3>Hand-drawn sketches &amp; iterations.</h3>
+      </section>
+      <section>
+        <img src="imgs/breakpoints.png"/>
+      </section>
+      <section>
+        <h2>4. <a href="responsive_prototype/index.html" title="Ethan Marcotte — Responsive Web Design" class="image">HTML prototype</a></h2>
+        <h3>Flexible grid foundation &amp; media queries.</h3>
+      </section>
+      <section>
+        <h2>5. Review & iterations</h2>
+        <h3>Client deliverables — screen shots of different screen sizes.</h3>
+        <h3>Iterate with review changes.</h3>
+      </section>
+      <section>
+        <img class="screen_shots" src="imgs/large.png"/>
+        <img class="screen_shots" src="imgs/medium.png"/>
+        <img class="screen_shots" src="imgs/small.png"/>
+      </section>
+      <section>
+        <h2>6. Documented style guide</h2>
+        <h3>Documentation tools like <a href="http://www.dexy.it/" title="Dexy" class="image">Dexy</a> or <a href="https://github.com/adactio/Pattern-Primer" title="Pattern Primer" class="image">Jeremy Keith's Pattern Primer</a></h3>
+      </section>
+    </section>
+    <section>
+      <h1>Advantages</h1>
+      <h3>Expectations are more realistic.</h3>
+      <h3>Developers are happier - more useful than a PSD.</h3>
+      <h3>We skip the step of producing static mockups.</h3>
+      <h3>We'll end up saving time — different devices &amp; review changes.</h3>
+    </section>
+    <section>
+      <h1>Best practices</h1>
+      <h3>Content first, mobile first.</h3>
+      <h3>Using Sass instead of CSS.</h3>
+      <h3>Frameworks like Bootstrap aren't always a great idea.</h3>
+      <h3>Test on different devices (not just Apple or Android).</h3>
+    </section>
+    <section>
+      <h1>Sources</h1>
+      <h3><a href="http://www.ons.gov.uk/ons/rel/rdit2/internet-access---households-and-individuals/2012-part-2/stb-ia-2012part2.html#tab-Internet-use-over-a-mobile-phone--or-other-handheld-device-" title="Stephen Hay — Responsive design Workflow" class="image">Office for National Statistics</a></h3>
+      <h3><a href="http://www.slideshare.net/stephenhay/mobilism2012" title="Stephen Hay — Responsive design Workflow" class="image">Stephen Hay — Responsive Design Workflow</a></h3>
+      <h3><a href="http://www.slideshare.net/bryanrieger" title="Bryan Rieger — Rethinking the Mobile Web" class="image">Bryan Rieger — Rethinking the Mobile Web</a></h3>
+      <h3><a href="http://alistapart.com/article/responsive-web-design" title="Ethan Marcotte — Responsive Web Design" class="image">Ethan Marcotte — Responsive Web Design</a></h3>
+    </section>
+    <section>
+      <h1 id="thankyou">Thank you!</h1>
+    </section>
+  </div>
+
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.addEventListener('slidechanged', function(event) {
+  var slide  = event.currentSlide,
+      images = slide.getElementsByTagName('img'),
+      length = images.length, image, src;
+  for(var i=0; i < length; i++) {
+    image = images[i];
+    src   = image.getAttribute('data-delay-src');
+    if (src) {
+      image.addEventListener('load', function() {
+        slide.classList.remove('loading');
+        Reveal.layout();
+      });
+      image.src = src;
+    }
+  }
+  Reveal.layout();
+  // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+});
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  minScale: 0.7,
+  maxScale: 1.0,
+  margin: 0.001,
+  loop: true,
+  overview: false,
+
+
+  // Poner resolución del mac
+  width: 1680,
+  height: 1050,
+
+
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    //{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    //{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    //{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    //{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    //{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+// window.onload = function () {
+//   var images = document.getElementsByTagName('img'),
+//       length = images.length, image, src;
+//   for(var i=0; i < length; i++) {
+//     image = images[i];
+//     src   = image.getAttribute('data-delay-src');
+//     if (src)
+//       image.src = src;
+//   }
+// }
+</script>
+
+</body>
+</html>
